@@ -7,6 +7,8 @@ import SignUp from './SignUp';
 import Login from './Login';
 import LogoutButton from './LogoutButton';
 import './styles.css';
+import HomePage from './HomePage';
+import logoImage from './assets/logo.png';
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem('token'));
@@ -31,7 +33,9 @@ function App() {
     <Router>
       <div id="app-container">
         <nav className="navbar">
-          <div className="navbar-title">BUDGET BUDDY</div>
+          <div className="navbar-logo">
+          <img src={logoImage} alt="Budget Buddy Logo" />
+          </div>
           { token ? (
             // If user is authenticated
             <>
@@ -40,25 +44,29 @@ function App() {
                 <button>Payment Entries</button>
               </Link>
               <Link to="/PaymentEntriesList">
-                <button>Payment Entries List</button>
+                <button className='button_payments'>View Records</button>
               </Link>
             </>
           ) : (
             // If user is not authenticated
             <>
-              <Link to="/Login">
-                <button>Login</button>
+            <Link to="/PaymentEntry">
+                <button className='button_payments'>Add Payment</button>
               </Link>
-              <Link to="/SignUp">
-                <button>Sign Up</button>
+            <Link to="/PaymentEntriesList">
+                <button className='button_payments'>View Records</button>
+              </Link>
+            <Link to ="/Login">
+              <button className='button_login'>Join</button>
               </Link>
             </>
           )}
         </nav>
         <div className="main-content">
           <Routes>
-            <Route path="/" element={<Login />} index />
+            <Route path="/" element={<HomePage />} index />
             <Route path="/SignUp" element={<SignUp />} />
+            <Route path="/Login" element={<Login />} />
             <Route path="/PaymentEntry" element={<PaymentEntry userId={userId} />} />
             <Route path="/PaymentEntriesList" element={<PaymentEntriesList userId={userId} />} />
           </Routes>
