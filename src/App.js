@@ -8,6 +8,7 @@ import Login from './Login';
 import LogoutButton from './LogoutButton';
 import './styles.css';
 import HomePage from './HomePage';
+import './HomePage.css';
 import logoImage from './assets/logo.png';
 
 function App() {
@@ -33,7 +34,7 @@ function App() {
     <Router>
       <div id="app-container">
         <nav className="navbar">
-          <div className="navbar-logo">
+          <div className="navbar__logo">
           <img src={logoImage} alt="Budget Buddy Logo" />
           </div>
           { token ? (

@@ -1,0 +1,134 @@
+.image-container {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    height: 200px;
+    font-size: 20px;
+    font-family: 'Architects Daughter', cursive;
+    justify-content: space-evenly;
+    
+  
+  }
+  .image-container__piggy{
+  width: 200px;
+  height: 180px;
+  }
+  
+  .image-container-attribution{
+    font-size: 12px;
+    font-family: 'Architects Daughter', cursive;
+    padding-left: 40px;
+  }
+  
+  .image-container__paragraph {
+  border: 1px solid;
+  border-color:#7146db;
+  height: 160px;
+  box-shadow: 6px 4px 8px;
+  padding: 2%;
+  box-sizing: border-box;
+  border-radius: 12px;
+  width: 80%;
+  
+  }
+  .container-features{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 0px;
+    padding-top: 20px;
+    justify-content: space-evenly;
+  }
+  
+  .features-wrapper--left{
+    padding-left: 20px;
+  }
+  .features-photo
+  {
+    width: 400px;
+    height: 400px;
+    border: 1px solid;
+    border-color:#7146db;
+    border-radius: 12px;
+    box-shadow: 6px 4px 8px;
+  
+  }
+  .features-title {
+    font-family: 'Architects Daughter', cursive;
+  }
+  .features-description {
+    font-family: 'Inconsolata', monospace;
+    font-size: 18px;
+  }
+  .contact-page{
+    background-image: url('./assets/contact_page.jpg');
+    background-size: cover;
+    height: 700px;
+  }
+  
+  .contact-form {
+    display: flex;
+    height: 600px;
+    width: 800px;
+    align-items: flex-start;
+    justify-content: flex-end
+  }
+  
+  .contact-title {
+    margin: 0;
+    padding-bottom: 20px;
+    font-size: 60px;
+    font-family: 'Architects Daughter', cursive;
+  }
+  
+  .contact-label{
+    font-family: 'Inconsolata', monospace;
+    font-size: 20px;
+    align-content: flex-start;
+    margin-bottom: 10px;
+  }
+  .contact-input--bottom{
+    height: 300px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: 12px;
+  }
+  
+  .contact-input{
+    height: 50px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: 12px;
+  }
+  
+  .contact-input:focus,
+  .contact-input--bottom:focus {
+      background-color: #f2f0f7;
+      
+    }
+  
+  .contact-box{
+    padding: 20px;
+    background: none;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .contact-button{
+    border: none;
+    padding: 0.5 rem 1 rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100px;
+    box-sizing: border-box;
+    background-color: #7146db;
+    color: white;
+    font-size: 18px;
+  }
+  
+  .contact-button:hover {
+    color: hsl(259, 45%, 31%);
+  }
+  

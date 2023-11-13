@@ -3,14 +3,6 @@ body {
     color: #333;
 }
 
-.header {
-    background-color: #000000;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    font-size: 24px;
-}
-
 .navbar {
     border-bottom: 1px solid;
     border-color: #d9d9e3;
@@ -36,6 +28,10 @@ body {
 
 }
 
+.navbar button:hover {
+  color: hsl(259, 45%, 31%);
+
+}
 .button_payments{
   background-color: transparent;
   color: #F3A6C9;
@@ -45,151 +41,14 @@ body {
   white-space: nowrap;
 }
 
-.button_payments:hover {
-  color: hsl(259, 45%, 31%);
-}
 .button_login {
   background-color: #967adc;
   color: white;
   font-size: 18px;
 }
-.navbar button:hover {
-    color: hsl(259, 45%, 31%);
 
-}
-
-.image-container {
-  display: flex;
-  justify-items: center;
-  align-items: center;
-  height: 200px;
-  font-size: 20px;
-  font-family: 'Architects Daughter', cursive;
-  justify-content: space-evenly;
-  
-
-}
-.image-piggy{
-width: 200px;
-height: 180px;
-}
-
-.image-container-attribution{
-  font-size: 12px;
-  font-family: 'Architects Daughter', cursive;
-  padding-left: 40px;
-}
-
-.image-container-paragraph {
-border: 1px solid;
-border-color:#7146db;
-height: 160px;
-box-shadow: 6px 4px 8px;
-padding: 2%;
-box-sizing: border-box;
-border-radius: 12px;
-width: 80%;
-
-}
-.container_features{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 40px;
-  grid-row-gap: 0px;
-  padding-top: 20px;
-  justify-content: space-evenly;
-}
-
-.features_wrapper--left{
-  padding-left: 20px;
-}
-.features_photo
-{
-  width: 400px;
-  height: 400px;
-  border: 1px solid;
-  border-color:#7146db;
-  border-radius: 12px;
-  box-shadow: 6px 4px 8px;
-
-}
-.features_title {
-  font-family: 'Architects Daughter', cursive;
-}
-.features_description {
-  font-family: 'Inconsolata', monospace;
-  font-size: 18px;
-}
-.contact_page{
-  background-image: url('./assets/contact_page.jpg');
-  background-size: cover;
-  height: 700px;
-}
-
-.contact-form {
-  display: flex;
-  height: 600px;
-  width: 800px;
-  align-items: flex-start;
-  justify-content: flex-end
-}
-
-.contact_title {
-  margin: 0;
-  padding-bottom: 20px;
-  font-size: 60px;
-  font-family: 'Architects Daughter', cursive;
-}
-
-.contact-label{
-  font-family: 'Inconsolata', monospace;
-  font-size: 20px;
-  align-content: flex-start;
-  margin-bottom: 10px;
-}
-.contact-input--bottom{
-  height: 300px;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border-radius: 12px;
-}
-
-.contact-input{
-  height: 50px;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border-radius: 12px;
-}
-
-.contact-input:focus,
-.contact-input--bottom:focus {
-    background-color: #f2f0f7;
-    
-  }
-
-.contact-box{
-  padding: 20px;
-  background: none;
-  width: 100%;
-  max-width: 400px;
-}
-
-.contact-button{
-  border: none;
-  padding: 0.5 rem 1 rem;
-  margin: 0 0.5rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 100px;
-  box-sizing: border-box;
-  background-color: #7146db;
-  color: white;
-  font-size: 18px;
-}
-
-.contact-button:hover {
-  color: hsl(259, 45%, 31%);
+.navbar, .footer {
+  padding: 0.5rem;
 }
 
 .footer {
@@ -200,44 +59,9 @@ width: 80%;
     background-color: #d9d9e3;
 }
 
-.header, .navbar, .footer {
-    padding: 0.5rem;
-}
-
-.navbar-title {
-    float: left;
-    font-family: 'Agbalumo' sans-serif;
-    font-size: 1.5rem;
-    margin-right: 2rem;
-    color: black;
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-
-  #root {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-
-  .main-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
   .github-link:hover {
-    color: hsl(259, 94%, 6%);
+    color: hsl(259, 80%, 31%);
   }
-
-  .footer {
-    flex-shrink: 0;
-}
 /* ===============================payment form==========================*/
 /* General container to align form to the middle */
 .form-container {
