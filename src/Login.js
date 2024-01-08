@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { postData } from './httpService';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
@@ -46,6 +47,9 @@ const Login = () => {
           />
         </label>
         <button className="form-button" type="submit">Login</button>
+        <p className="signup-link">
+        No account? <Link to="/signUp">Sign up</Link>
+      </p>
       </form>
     </div>    
     );

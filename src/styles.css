@@ -1,12 +1,25 @@
+:root {
+    --background-color: #f2f0f7;
+    --text-color: #333;
+    --border-color: #d9d9e3;
+    --highlight-color: hsl(259, 45%, 31%);
+    --button-hover-color: hsl(259, 80%, 31%);
+    --footer-background-color: #d9d9e3;
+    --secondary-text-color: #7146db;
+    --button-login-background: #967adc;
+    --button-payment-color: #F3A6C9;
+    --font-primary: 'Architects Daughter', cursive;
+    --font-secondary: 'Inconsolata', monospace;
+}
+
 body {
-    background-color: #f2f0f7;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 .navbar {
-    border-bottom: 1px solid;
-    border-color: #d9d9e3;
-    background-color: #f2f0f7;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--background-color);
     padding: 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 120px;
@@ -29,12 +42,12 @@ body {
 }
 
 .navbar button:hover {
-  color: hsl(259, 45%, 31%);
+  color: var(--highlight-color);
 
 }
 .button_payments{
   background-color: transparent;
-  color: #F3A6C9;
+  color: var(--button-payment-color);
   font-family: 'Inconsolata', monospace;
   font-size: 25px;
   font-weight: 600;
@@ -42,25 +55,21 @@ body {
 }
 
 .button_login {
-  background-color: #967adc;
+  background-color: var(--button-login-background);
   color: white;
   font-size: 18px;
 }
 
-.navbar, .footer {
-  padding: 0.5rem;
-}
-
 .footer {
-    color: #7146db;
+    color: var(--secondary-text-color);
     text-align: center;
     padding: 1 rem 0;
     font-size: 14px;
-    background-color: #d9d9e3;
+    background-color: var(--footer-background-color);
 }
 
   .github-link:hover {
-    color: hsl(259, 80%, 31%);
+    color: var(--button-hover-color);
   }
 /* ===============================payment form==========================*/
 /* General container to align form to the middle */
@@ -195,3 +204,30 @@ select, .payment-form select,
     font-weight: bold;
     margin-right: 10px;
   }
+
+  .home-page__image-container, .payment-page__image-container {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    height: 200px;
+    font-size: 20px;
+    font-family: var(--font-primary);
+    justify-content: space-evenly;
+  }
+
+  
+.home-page__image, .payment-page__image {
+  width: 200px;
+  height: 180px;
+}
+
+.home-page__description, .payment-page__description {
+  border: 1px solid;
+  border-color: #7146db;
+  height: 160px;
+  box-shadow: 6px 4px 8px;
+  padding: 2%;
+  box-sizing: border-box;
+  border-radius: 12px;
+  width: 80%;
+}

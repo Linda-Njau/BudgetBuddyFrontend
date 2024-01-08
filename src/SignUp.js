@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { postData } from './httpService';
 
 const SignUp = () => {
@@ -54,6 +55,9 @@ return (
       />
     </label>
     <button className="form-button" type="submit">Create Account</button>
+    <p className="signup-link">
+        already have an account? <Link to="/Login">Login</Link>
+      </p>
   </form>
 </div>
 );
