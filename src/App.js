@@ -34,19 +34,22 @@ function App() {
     <Router>
       <div id="app-container">
         <nav className="navbar">
-          <div className="navbar__logo">
+          <Link to="/">
+            <div className="navbar__logo">
           <img src={logoImage} alt="Budget Buddy Logo" />
           </div>
+          </Link>
           { token ? (
             // If user is authenticated
             <>
-              <LogoutButton setToken={setToken} setUserId={setUserId}/>
+              
               <Link to="/PaymentEntry">
-                <button>Payment Entries</button>
+                <button className='button_payments'>Add Payment</button>
               </Link>
               <Link to="/PaymentEntriesList">
                 <button className='button_payments'>View Records</button>
               </Link>
+              <LogoutButton className='button_login' setToken={setToken} setUserId={setUserId}/>
             </>
           ) : (
             // If user is not authenticated

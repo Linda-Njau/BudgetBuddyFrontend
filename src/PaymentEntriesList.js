@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { fetchPaymentEntries } from './httpService';
 import './styles.css';
+import piggyImage from './assets/piggy_03.png';
 import withAuth from './withAuth';
 
 const PaymentEntriesList = ({ userId }) => {
@@ -65,8 +66,21 @@ const PaymentEntriesList = ({ userId }) => {
   }, [paymentCategory, month, allPaymentEntries]);
   
   return (
+    <div className="payment-list-page">
+       <div className="payment-list-page__image-container">
+          <img
+            src={piggyImage}
+            alt="Budget Buddy Piggy"
+            className="payment-list-page__image"
+          />
+          <p className="payment-list-page__description">
+          Easily manage your spending with Budget Buddy! Just go to the section for your payments and use the simple options to organize them.
+           You can group transactions by category and choose specific months. 
+          It's a straightforward way to understand your money better 
+          – filter, check, and stay in control! 💳📆✨
+          </p>
+        </div>
     <div className="filter-container">
-      <h2>Your Payment Entries</h2>
       <div className="filter-group">
         <div className="filter-item">
         <label>
@@ -94,7 +108,7 @@ const PaymentEntriesList = ({ userId }) => {
           />
         </label>
       </div>
-        <button className="filter-button" onClick={filterEntries}>
+        <button className="button_filter" onClick={filterEntries}>
           Filter
         </button>
       </div>
@@ -116,6 +130,7 @@ const PaymentEntriesList = ({ userId }) => {
           ))}
         </tbody>
       </table>
+    </div>
     </div>
   );
 };

@@ -44,11 +44,3 @@
     color: #777;
     font-style: italic;
   }
-  button {
-    padding: 10px 20px;
-    background-color: blue;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }

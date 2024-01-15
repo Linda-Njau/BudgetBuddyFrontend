@@ -6,6 +6,9 @@ const SignUp = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [username, setUsername] = useState('');
+    const [passwordError, setPasswordError] = useState('');
+    const [usernameError, setUsernameError] = useState('');
+    const [emailError, setEmailError] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -19,6 +22,19 @@ const SignUp = () => {
             console.log('User Creation Response:', response);
         } catch (error) {
             console.error('User Creation Error:', error);
+            if (error.response?.data?.message) {
+              const errorMessage = error.response.data.message;
+              if (errorMessage.includes('password')) {
+                  setPasswordError('Password is too short!');
+              } else if (errorMessage.includes('username')) {
+                  setUsernameError('Username already exists. Please choose another.');
+              } else if (errorMessage.includes('email')) {
+                  setEmailError('Email already exists. Please use a different email.');
+              }
+          } 
+          setPasswordError('');
+          setUsernameError('');
+          setEmailError('');
     }
 };
 return (
