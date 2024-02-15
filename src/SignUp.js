@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { postData } from './httpService';
+import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
     const [email, setEmail] = useState('');
@@ -9,6 +10,7 @@ const SignUp = () => {
     const [passwordError, setPasswordError] = useState('');
     const [usernameError, setUsernameError] = useState('');
     const [emailError, setEmailError] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -18,7 +20,12 @@ const SignUp = () => {
                 password: password,
                 username: username,
             };
-            await postData('/users', payload);
+            const response = await postData('/users', payload);
+            localStorage.setItem('token', response.access_token);
+            localStorage.setItem('user_id', response.user_id);
+
+            window.dispatchEvent(new Event('storage'));
+            navigate('/PaymentEntry');
           } catch (error) {
              if (error.response?.data?.error) {
                const errorData = error.response.data.error;

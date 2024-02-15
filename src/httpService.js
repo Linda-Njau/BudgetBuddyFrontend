@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const httpClient = axios.create({
-    baseURL: 'https://dry-reaches-89200-3dc0ca953185.herokuapp.com/',
+    baseURL: 'http://localhost:5000/',
 });
 
 httpClient.interceptors.request.use((config) => {
@@ -16,6 +16,7 @@ httpClient.interceptors.request.use((config) => {
 
 export const postData = async (endpoint, data) => {
     try {
+        console.log(postData);
         const response = await httpClient.post(endpoint, data);
         return response.data;
     } catch(error) {
@@ -37,6 +38,7 @@ export const fetchPaymentEntries = async (user_id, payment_category, month) => {
             endpoint += `?${queryParams.toString()}`;
         }
         const response = await httpClient.get(endpoint);
+        console.log(response)
         return response.data;
     } catch (error) {
         throw error;

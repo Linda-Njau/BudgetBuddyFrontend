@@ -20,7 +20,7 @@ const PaymentEntry = ({ userId }) => {
         try {
             const payload = { 
                 amount: parseFloat(amount), 
-                transactionDate: formattedDate,  
+                transaction_date: formattedDate,  
                 payment_category: payment_category,
                 user_id: userId,
             };
@@ -28,6 +28,7 @@ const PaymentEntry = ({ userId }) => {
             setAmount('');
             setTransactionDate(new Date());
         } catch (error) {
+          console.error(error);
         }
     };
     return (
