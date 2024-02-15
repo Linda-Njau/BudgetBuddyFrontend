@@ -65,7 +65,7 @@
   font-family: var(--font-secondary);
   font-size: 20px;
   align-content: flex-start;
-  margin-bottom: 10px;
+  margin: 20px;
 }
 
 .home-page__form-input {
@@ -80,6 +80,7 @@
   padding: 12px 20px;
   box-sizing: border-box;
   border-radius: 12px;
+  margin: 20px;
 }
 
 .home-page__form-input:focus,

@@ -20,12 +20,9 @@ function App() {
       setToken(localStorage.getItem('token'));
       setUserId(localStorage.getItem('user_id'));
     };
-
-    // Listen to storage events
     window.addEventListener('storage', handleStorageChange);
 
     return () => {
-      // Clean up the event listener
       window.removeEventListener('storage', handleStorageChange);
     };
   }, []);

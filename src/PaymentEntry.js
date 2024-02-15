@@ -16,9 +16,7 @@ const PaymentEntry = ({ userId }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Submit button clicked');
         const formattedDate = transactionDate.toISOString().split('T')[0];
-        console.log('Formatted Date:', formattedDate);
         try {
             const payload = { 
                 amount: parseFloat(amount), 
@@ -26,15 +24,10 @@ const PaymentEntry = ({ userId }) => {
                 payment_category: payment_category,
                 user_id: userId,
             };
-            console.log('Amount:', amount);
-            console.log('Payment Category:', payment_category);
-            console.log('the complete payload: ', payload)
-            const response = await postData('/payment_entries', payload);
-            console.log('Server Resonse: ', response);
+         await postData('/payment_entries', payload);
             setAmount('');
             setTransactionDate(new Date());
         } catch (error) {
-            console.error('Payment Entry Failed:', error);
         }
     };
     return (
