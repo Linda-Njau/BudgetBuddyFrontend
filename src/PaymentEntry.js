@@ -3,16 +3,17 @@ import './paymententry.css';
 import { postData } from './httpService';
 import DatePicker from 'react-datepicker'; 
 import 'react-datepicker/dist/react-datepicker.css';
+import { useNavigate } from 'react-router-dom';
 import piggyImage from './assets/piggy_03.png';
 import amountImage from './assets/amount.png';
 import categoryImage from './assets/category.png';
 import calendarImage from './assets/calendar.png';
-import PropTypes from 'prop-types';
 
 const PaymentEntry = ({ userId }) => {
     const [amount, setAmount ] = useState('');
     const [transactionDate, setTransactionDate] = useState(new Date());
     const [payment_category, setPaymentCategory] = useState('FOOD');
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -27,8 +28,8 @@ const PaymentEntry = ({ userId }) => {
          await postData('/payment_entries', payload);
             setAmount('');
             setTransactionDate(new Date());
+            navigate('/PaymentEntriesList');
         } catch (error) {
-          console.error(error);
         }
     };
     return (
@@ -91,7 +92,7 @@ const PaymentEntry = ({ userId }) => {
                 <option value="FOOD">FOOD</option>
                 <option value="TRAVEL">TRAVEL</option>
                 <option value="UTILITIES">UTILITIES</option>
-                <option value="TRANSPORT">TRANSPORT</option>
+                <option value="TRANSPORTATION">TRANSPORTATION</option>
                 <option value="ENTERTAINMENT">ENTERTAINMENT</option>
               </select>
             </label>
@@ -117,11 +118,6 @@ const PaymentEntry = ({ userId }) => {
       </div>
       </div>
     );
-    
-
-PaymentEntry.propTypes = {
-  userId: PropTypes.number.isRequired,
-};
 };
 
 export default PaymentEntry

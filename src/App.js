@@ -37,7 +37,6 @@ function App() {
           </div>
           </Link>
           { token ? (
-            // If user is authenticated
             <>
               
               <Link to="/PaymentEntry">
@@ -49,7 +48,6 @@ function App() {
               <LogoutButton className='button_login' setToken={setToken} setUserId={setUserId}/>
             </>
           ) : (
-            // If user is not authenticated
             <>
             <Link to="/PaymentEntry">
                 <button className='button_payments'>Add Payment</button>
@@ -73,7 +71,7 @@ function App() {
           </Routes>
         </div>
         <footer className="footer">
-          &copy; Budget Buddy by <a href="https://github.com/Linda-Njau" className="github-link">Linda-Njau</a>
+          &copy; <a href="https://github.com/Linda-Njau/BudgetBuddyBackend" className="github-link">Budget Buddy</a> by <a href="https://github.com/Linda-Njau" className="github-link">Linda-Njau</a>
         </footer>
       </div>
     </Router>

@@ -43,7 +43,7 @@
 .home-page__contact-section {
   background-image: url('./assets/contact_page.jpg');
   background-size: cover;
-  height: 700px;
+  height: 800px;
 }
 
 .home-page__contact-form {
@@ -73,6 +73,8 @@
   padding: 12px 20px;
   box-sizing: border-box;
   border-radius: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .home-page__form-input--bottom {
@@ -80,7 +82,7 @@
   padding: 12px 20px;
   box-sizing: border-box;
   border-radius: 12px;
-  margin: 20px;
+  margin-top: 20px;
 }
 
 .home-page__form-input:focus,

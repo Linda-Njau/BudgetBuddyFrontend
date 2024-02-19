@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const httpClient = axios.create({
-    baseURL: 'http://localhost:5000/',
+    baseURL:  'https://dry-reaches-89200-3dc0ca953185.herokuapp.com',
 });
 
 httpClient.interceptors.request.use((config) => {
