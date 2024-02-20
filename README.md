@@ -1,7 +1,9 @@
 # ![Logo of the project](./src/assets/logo_clear_background.png)
- 
+live at: https://budget-buddy-frontend.vercel.app/
+
+This repository is dedicated to the Frontend. To view the Backend, please click [here](https://github.com/Linda-Njau/BudgetBuddyBackend).
+
  A budgeting app designed to track expenses across various in categories with an automated email system for overspending alerts.
- This repository is dedicated to the Frontend. To view the Backend, please click [here](https://github.com/Linda-Njau/BudgetBuddyBackend)
 
 ## Table of Contents
   - [Setup Guide](#setup-guide)
