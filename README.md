@@ -1,5 +1,5 @@
 # ![Logo of the project](./src/assets/logo_clear_background.png)
-live at: https://budget-buddy-frontend.vercel.app/
+
 
 This repository is dedicated to the Frontend. To view the Backend, please click [here](https://github.com/Linda-Njau/BudgetBuddyBackend).
 
